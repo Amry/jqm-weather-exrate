@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	 -->
+	<link rel="stylesheet" href="styles/lib/jquery.mobile-1.4.5.min.css" />
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+	<script id="panel-init">
+		$(function() {
+			$( "body>[data-role='panel']" ).panel();
+		});
+	</script>
+</head>
+<body>
+
+<!-- home -->
+<div data-role="page" id="home">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<a href="#overlayPanel" data-icon="bullets">Menu</a>
+			<h1>Home</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Page content goes here.</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<h4>CopyRight</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Weather -->
+<div data-role="page" id="weather">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<a href="#overlayPanel" data-icon="bullets">Menu</a>
+		<h1>Weather</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Weather</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<h4>CopyRight</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- About -->
+<div data-role="page" id="about">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<a href="#overlayPanel" data-icon="bullets">Menu</a>
+		<h1>About</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Here comes about the software and Software Developer Info</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<h4>CopyRight</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Main Menu--> 
+<div data-role="panel" id="overlayPanel" data-display="overlay"> 
+    <h2>Categories</h2>
+    <ul data-role="list-view">
+		<li><a href="#home">Home</li>
+		<li><a href="#weather">Weather</li>
+		<li><a href="">Live Exchange Rate</li>
+		<li><a href="">About</li>
+			
+	</ul>
+    <a href="#weather" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close menu</a>
+  </div>
+
+</body>
+</html>
