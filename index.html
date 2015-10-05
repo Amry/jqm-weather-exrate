@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>My App</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,7 +10,9 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	 -->
+	
 	<link rel="stylesheet" href="styles/lib/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="styles/css/custom.css">
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/lib/jquery.mobile-1.4.5.min.js"></script>
 	<script id="panel-init">
@@ -21,66 +23,83 @@
 </head>
 <body>
 
-<!-- home -->
-<div data-role="page" id="home">
-	<div data-role="header" data-position="fixed" data-fullscreen="true">
+<!--Create main header and footer template-->
+<div data-role="header" data-position="fixed" data-theme="b">
 		<a href="#overlayPanel" data-icon="bullets">Menu</a>
-			<h1>Home</h1>
-	</div><!-- /header -->
+		<h1></h1>
+</div><!-- /header -->
+<div data-role="footer" data-position="fixed" data-theme="b">
+		<h4>&copy; Jasmine-2015</h4>
+</div><!-- /footer -->
 
-	<div role="main" class="ui-content">
-		<p>Page content goes here.</p>
+
+<!-- home -->
+<div data-role="page" id="home" data-title="About the Application">
+	
+
+	<div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<p>About the Application</p>
 	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" data-fullscreen="true">
-		<h4>CopyRight</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+</div>
+	
 
 <!-- Weather -->
-<div data-role="page" id="weather">
-	<div data-role="header" data-position="fixed" data-fullscreen="true">
-		<a href="#overlayPanel" data-icon="bullets">Menu</a>
-		<h1>Weather</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>Weather</p>
+<div data-role="page" id="weather" data-title="Weather Forecast">
+		<input name="city-search" id="city-search" value="Isfara" class="ui-" type="search" placeholder="Enter City Name" data-wrapper-class="controlgroup-textinput ui-btn"/>
+		<a href="#" class="ui-btn" id="city-search-btn">Search</a>
+		
+	<div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div id="content">
+			<p id="for"> </p>
+			<p id="description"> </p>
+			<p id="astronomy"> </p>
+			<p id=""> </p>
+			<p id=""> </p> 
+		</div>
+					
 	</div><!-- /content -->
 
-	<div data-role="footer" data-position="fixed" data-fullscreen="true">
-		<h4>CopyRight</h4>
-	</div><!-- /footer -->
+	
+</div><!-- /page -->
+
+<!-- Exchange Rate-->
+<div data-role="page" id="exrate" data-title="Currency Exchange Rate">
+	
+	<div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<p>Currency</p>
+	</div><!-- /content -->
+
+	
 </div><!-- /page -->
 
 <!-- About -->
-<div data-role="page" id="about">
-	<div data-role="header" data-position="fixed" data-fullscreen="true">
-		<a href="#overlayPanel" data-icon="bullets">Menu</a>
-		<h1>About</h1>
-	</div><!-- /header -->
-
+<div data-role="page" id="about" data-title="About">
+	
 	<div role="main" class="ui-content">
 		<p>Here comes about the software and Software Developer Info</p>
 	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" data-fullscreen="true">
-		<h4>CopyRight</h4>
-	</div><!-- /footer -->
+	
 </div><!-- /page -->
 
 <!-- Main Menu--> 
-<div data-role="panel" id="overlayPanel" data-display="overlay"> 
-    <h2>Categories</h2>
-    <ul data-role="list-view">
-		<li><a href="#home">Home</li>
-		<li><a href="#weather">Weather</li>
-		<li><a href="">Live Exchange Rate</li>
-		<li><a href="">About</li>
+	<div data-role="panel" id="overlayPanel" data-display="push" data-theme="a"> 
+		<h2>Categories</h2>
+		<ul data-role="list-view" id="mymenu" data-theme="d" data-icon="false">
+			<li><a href="#home">Home</li>
+			<li><a href="#weather">Weather</li>
+			<li><a href="#exrate">Live Exchange Rate</li>
+			<li><a href="#about">About</li>
 			
-	</ul>
-    <a href="#weather" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close menu</a>
+		</ul>
+    <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close menu</a>
   </div>
 
+  
+  <!-- add js files of app -->
+  <script src="js/src/loadhf.js"></script>
+  <script src="js/src/home.js"></script>
+  <script src="js/src/weather.js"></script>
+  <script src="js/src/exRate.js"></script>
+  <script src="js/src/about.js"></script>
 </body>
 </html>
