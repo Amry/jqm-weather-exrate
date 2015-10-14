@@ -18,6 +18,7 @@
 	<script id="panel-init">
 		$(function() {
 			$( "body>[data-role='panel']" ).panel();
+		
 		});
 	</script>
 </head>
@@ -34,7 +35,7 @@
 
 
 <!-- home -->
-<div data-role="page" id="home" data-title="About the Application">
+<div data-role="page" id="home" data-id="home" data-title="About the Application">
 	
 
 	<div role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -44,10 +45,11 @@
 	
 
 <!-- Weather -->
-<div data-role="page" id="weather" data-title="Weather Forecast">
-		<input name="city-search" id="city-search" value="Isfara" class="ui-" type="search" placeholder="Enter City Name" data-wrapper-class="controlgroup-textinput ui-btn"/>
-		<a href="#" class="ui-btn" id="city-search-btn">Search</a>
-		
+<div data-role="page" id="weather" data-id="weather" data-title="Weather Forecast">
+	<div class="ui-grid-a">
+		<div class="ui-block-a" style="width:80%; height:120px"><input name="city-search" id="city-search" value="Isfara" type="search" placeholder="Enter City Name"></div>
+		<div class="ui-block-b" style="width:20%; height:120px"><a href="#" data-role="button" id="city-search-btn" data-mini="true">Search</a></div>
+	</div><!-- /grid-a -->
 	<div role="main" class="ui-content jqm-content jqm-fullwidth">
 		<div id="content">
 			<p id="for"> </p>
@@ -63,20 +65,31 @@
 </div><!-- /page -->
 
 <!-- Exchange Rate-->
-<div data-role="page" id="exrate" data-title="Currency Exchange Rate">
+<div data-role="page" id="exrate" data-id="exrate" data-title="Currency Exchange Rate">
 	
 	<div role="main" class="ui-content jqm-content jqm-fullwidth">
-		<p>Currency</p>
+		<div data-role="fieldcontain">
+			<label for="from">From:</label>
+			<input type="text" name="from" id="from" value="" data-icon="carat-l"  />
+		</div>
+		<div data-role="fieldcontain">
+			<label for="to">To:</label>
+			<input type="text" name="to" id="to" value="" data-icon="carat-r"  />
+		</div>
 	</div><!-- /content -->
 
 	
 </div><!-- /page -->
 
 <!-- About -->
-<div data-role="page" id="about" data-title="About">
+<div data-role="page" id="about" data-id="about" data-title="About">
 	
 	<div role="main" class="ui-content">
-		<p>Here comes about the software and Software Developer Info</p>
+		
+		<div class="ui-grid-a">
+			<div class="ui-block-b"><p>Here comes about the software and Software Developer Info</p></div>	
+		
+		</div>	
 	</div><!-- /content -->
 	
 </div><!-- /page -->
@@ -85,14 +98,14 @@
 	<div data-role="panel" id="overlayPanel" data-display="push" data-theme="a"> 
 		<h2>Categories</h2>
 		<ul data-role="list-view" id="mymenu" data-theme="d" data-icon="false">
-			<li><a href="#home">Home</li>
-			<li><a href="#weather">Weather</li>
-			<li><a href="#exrate">Live Exchange Rate</li>
-			<li><a href="#about">About</li>
+			<li id="home"><a href="#home">Home</li>
+			<li id="weather"><a href="#weather">Weather</li>
+			<li id="exrate"><a href="#exrate">Live Exchange Rate</li>
+			<li id="about"><a href="#about">About</li>
 			
 		</ul>
-    <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close menu</a>
-  </div>
+		<a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close menu</a>
+	</div>
 
   
   <!-- add js files of app -->

@@ -10,14 +10,20 @@ $(function() {
 			// Get the title of each active pages;
 			
 			var current = $( ".ui-page-active" ).jqmData( "title" );
+			var idCurrent = $( ".ui-page-active" ).jqmData( "id" );
+			
 			// Change the heading
 			$( "[data-role='header'] h1" ).text( current );
-			// Remove active class from nav buttons
-			//$( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
-			// Add active class to current nav button
-			//$( "[data-role='navbar'] a" ).each(function() {
-			//	if ( $( this ).text() === current ) {
-			//		$( this ).addClass( "ui-btn-active" );
-			//	}
-			//});
+			//change the panel menu;
+			//for example in case of page home, do not show in menu home;
+			var myList = $("#mymenu");
+			var allItems = myList.children().show();
+			var item = myList.find("#"+idCurrent);
+			item.hide();
+			
+			
+			switch (idCurrent){
+				case "home":
+						
+			}
 		});

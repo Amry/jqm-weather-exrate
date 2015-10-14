@@ -3,4 +3,5 @@ $(document).on('pageinit', '#home' ,function(){
 	//Check for internet connection on device with cordova api;
 	//Check if API's are available;
 	//alert("You are home!");
+	
 });
