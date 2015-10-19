@@ -1,8 +1,13 @@
 # jqm-weather-exrate
-jQuery Mobile application for live weather and exchange rate with ajax calls
+jQuery Mobile application for live weather and exchange rate using jQuery Mobile.
 
-As a frontend tool, I am using jQuery Mobile, for its mobile friendly features. 
+The weather forecast data comes from Yahoo Weather API
 
-And for weather and excahnge rate data, I use ajax calls from different public api's to restrieve. 
+The curreny exchange rate data comes from Currenylayer: https://currencylayer.com/documentation 
 
-More features also planned.
+TODO: 
+
+#Represent the json data from Yahoo in more human readable interface
+#Implement Currency exchange part
+#Add languages
+
